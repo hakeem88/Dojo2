@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dojo2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="600" Width="800">
+    <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="411*"/>
             <ColumnDefinition Width="106*"/>
         </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="610"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="162"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="108" VerticalAlignment="Top" Width="162" Margin="0,78,0,0"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="162" Margin="0,186,0,0"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="162" Margin="0,259,0,0"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="162" Margin="0,509,0,0"/>
+
 
     </Grid>
 </Window>
