@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dojo2"
         mc:Ignorable="d"
-        Title="Dojo 2 _ Schadi Mouhandes" Height="960" Width="1024" Icon="/images/Weather-01.png">
+        Title="Dojo 3 _ Schadi Mouhandes" Height="960" Width="1024" Icon="/images/Weather-01.png">
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="307*"/>
