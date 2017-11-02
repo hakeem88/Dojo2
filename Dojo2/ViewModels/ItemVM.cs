@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Dojo2.ViewModels
 {
-    public class ItemVM
+    public class ItemVM : ViewModelBase
     {
         public ItemBase test;
 
