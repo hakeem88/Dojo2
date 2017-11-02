@@ -51,8 +51,7 @@ namespace Dojo2.ViewModels
             set { test.PosY = value; RaisePropertyChanged(); }
         }
 
-        public string ValueType
-        {
+        public String ValueType {
             get
             {
                 if (test is ISensor)
@@ -61,8 +60,71 @@ namespace Dojo2.ViewModels
                     return (test as BaseActuator).ActuatorValueType.Name;
                 else
                     throw new NotImplementedException();
+                    
             }
 
         }
+
+        public Type ItemType
+        {
+            get
+            {
+                if (test is ISensor) return typeof(ISensor);
+                else if (test is IActuator) return typeof(IActuator);
+                else throw new NotImplementedException();
+            }
+        }
+
+
+        public String Mode
+        {
+            get
+            {
+                if (test is ISensor)
+                    return (test as BaseSensor).SensorMode.ToString();
+                if (test is IActuator)
+                    return (test as BaseActuator).ActuatorMode.ToString();
+                else return null;
+            }
+            set
+            {
+                if (test is ISensor)
+                    (test as BaseSensor).SensorMode = (SensorModeType)Enum.Parse(typeof(SensorModeType), value, false);
+                if (test is IActuator)
+                    (test as BaseActuator).ActuatorMode = (ModeType)Enum.Parse(typeof(ModeType), value, false);
+
+                RaisePropertyChanged();
+            }
+        }
+
+        public object Value
+        {
+            get {
+                if (test is ISensor)
+                    return (test as BaseSensor).SensorValue;
+                else if (test is IActuator)
+                    return (test as BaseActuator).ActuatorValue;
+                else
+                    throw new NotImplementedException();
+            }
+            set {
+                if (test is ISensor) (test as BaseSensor).SensorValue = value;
+                else if (test is IActuator) (test as BaseActuator).ActuatorValue = value;
+                else throw new NotImplementedException();
+                RaisePropertyChanged();
+            }
+        }
+
+        public ItemVM(ISensor sensor)
+        {
+            test = sensor as ItemBase;
+        }
+
+        public ItemVM(IActuator actuator)
+        {
+            test = actuator as ItemBase;
+        }
+
+
     }
 }
