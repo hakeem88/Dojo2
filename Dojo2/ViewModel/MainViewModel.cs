@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using System;
 
 namespace Dojo2.ViewModel
 {
@@ -29,6 +30,22 @@ namespace Dojo2.ViewModel
             ////{
             ////    // Code runs "for real"
             ////}
+
+
+        private string currentTime = DateTime.Now.ToLocalTime().ToShortTimeString();
+
+        public String CurrentDate
+        {
+            get { return CurrentDate; }
+            set { CurrentDate = value; RaisePropertyChanged(); }
         }
+
+        public String CurrentTime
+        {
+            get { return CurrentTime; }
+            set { CurrentTime = value; RaisePropertyChanged(); }
+        }
+
+    }
     }
 }
