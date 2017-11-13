@@ -20,8 +20,8 @@ namespace Dojo2.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
-        {
+        public MainViewModel() {
+
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.
@@ -32,20 +32,25 @@ namespace Dojo2.ViewModel
             ////}
 
 
-        private string currentTime = DateTime.Now.ToLocalTime().ToShortTimeString();
+            /*private string currentTime = DateTime.Now.ToLocalTime().ToShortTimeString();
 
-        public String CurrentDate
-        {
-            get { return CurrentDate; }
-            set { CurrentDate = value; RaisePropertyChanged(); }
+            public String CurrentDate
+            {
+                get { return CurrentDate; }
+                set { CurrentDate = value; RaisePropertyChanged(); }
+            }
+
+            public String CurrentTime
+            {
+                get { return CurrentTime; }
+                set { CurrentTime = value; RaisePropertyChanged(); }
+            }  */
+
+
         }
 
-        public String CurrentTime
-        {
-            get { return CurrentTime; }
-            set { CurrentTime = value; RaisePropertyChanged(); }
-        }
 
     }
+
     }
-}
+
